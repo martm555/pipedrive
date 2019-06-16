@@ -1,7 +1,7 @@
-import getOrganizationByName from "./getOrganizationByName";
-import insertOrganizationRelation from "./insertOrganizationRelation";
-import insertOrganization from "./insertOrganization";
-import {Organization} from "../types";
+import {Organization} from '../types';
+import getOrganizationByName from './getOrganizationByName';
+import insertOrganization from './insertOrganization';
+import insertOrganizationRelation from './insertOrganizationRelation';
 
 const insert = async (organization: Organization, parentId: number | null = null) => {
   try {
@@ -23,7 +23,7 @@ const insert = async (organization: Organization, parentId: number | null = null
     for (const daughter of organization.daughters) {
       await insert(daughter, organizationId);
     }
-  } catch(e) {
+  } catch (e) {
     // ignore errors
     console.log('error: ', e.message);
   }

@@ -1,7 +1,7 @@
 import insertOrganizations from '../commands/insertOrganizations';
+import {ValidationError} from '../errors/ValidationError';
 import {RouteMethods} from '../types';
 import asyncHandler from './asyncHandler';
-import {ValidationError} from "../errors/ValidationError";
 
 export default {
   method: RouteMethods.POST,
@@ -12,7 +12,7 @@ export default {
       }
       await insertOrganizations(req.body);
       return res.status(200).json({
-        message: 'success'
+        message: 'success',
       });
     }),
   ],

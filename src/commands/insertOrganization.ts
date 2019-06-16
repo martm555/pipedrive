@@ -1,7 +1,7 @@
-import db from "../utils/db";
+import db from '../utils/db';
 
 export default (name: string) => {
-	return db('organization').insert({
-		name,
-	});
-}
+  return db('organization').insert({
+    name,
+  });
+};

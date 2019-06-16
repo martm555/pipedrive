@@ -1,8 +1,8 @@
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import errorMiddleware from './middlewares/errorMiddleware';
+import apiRoutes from './routes/apiRoutes';
 import {PORT} from './utils/config';
-import apiRoutes from "./routes/apiRoutes";
 
 const app = express();
 app.use(bodyParser.json());

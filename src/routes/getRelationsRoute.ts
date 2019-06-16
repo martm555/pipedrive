@@ -1,7 +1,7 @@
 import getRelations from '../commands/getRelations';
+import {ValidationError} from '../errors/ValidationError';
 import {RouteMethods} from '../types';
 import asyncHandler from './asyncHandler';
-import {ValidationError} from "../errors/ValidationError";
 
 export default {
   method: RouteMethods.GET,

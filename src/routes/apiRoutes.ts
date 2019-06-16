@@ -1,6 +1,6 @@
+import {RouteMethods} from '../types';
 import getRelationsRoute from './getRelationsRoute';
 import insertOrganizationRoute from './insertOrganizationRoute';
-import {RouteMethods} from "../types";
 
 const routes = [
   insertOrganizationRoute,
@@ -15,4 +15,4 @@ export default (app) => {
       app.post(route.name, route.middlewares);
     }
   });
-}
+};
